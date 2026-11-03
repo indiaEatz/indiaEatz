@@ -1,0 +1,321 @@
+/* =================================
+   INDIAEATZ CAROUSEL
+================================= */
+
+.india-carousel {
+  position: relative;
+  width: 90%;
+  height: 500px;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 0;
+  background-color: #f99e6a;
+  font-family: 'lora' , serif;
+  border: 4px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 8px 25px  rgba(224, 102, 16, 0.3);
+  
+
+
+}
+
+/* Horizontal Track */
+.india-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Individual Slide */
+.india-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slide Image */
+.india-carousel-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+/* Dark Overlay */
+.india-carousel-overlay {
+  position: absolute;
+  inset: 0;
+
+  /* background: linear-gradient(
+    90deg,
+    rgba(250, 189, 103, 0.75) 0%,
+    rgba(252, 189, 138, 0.45) 50%,
+    rgba(250, 207, 154, 0.1) 100%
+  ); */
+}
+
+/* Text Container */
+.india-carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+
+  transform: translateY(-50%);
+
+  width: 75%;
+  max-width: 700px;
+
+  color: #ffffff;
+  z-index: 2;
+}
+
+/* Small Label */
+.india-carousel-label {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #ffb347;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+/* Heading */
+.india-carousel-content h1 {
+  margin: 0 0 20px;
+
+  color: #f48506;
+
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Description */
+.india-carousel-content p {
+  max-width: 600px;
+  margin: 0;
+
+  color: #3c2313;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =================================
+   LEFT AND RIGHT ARROWS
+================================= */
+
+.india-carousel-arrow {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #e8660a;
+
+  font-size: 21px;
+
+  cursor: pointer;
+  z-index: 5;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Previous Arrow */
+.india-carousel-prev {
+  left: 22px;
+}
+
+/* Next Arrow */
+.india-carousel-next {
+  right: 22px;
+}
+
+/* Hover Effect */
+.india-carousel-arrow:hover {
+  background-color: #e8660a;
+  color: #ffffff;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Keyboard Focus */
+.india-carousel-arrow:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* =================================
+   SLIDE INDICATORS
+================================= */
+
+.india-carousel-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 5;
+}
+
+.india-carousel-dot {
+  display: block;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.55);
+
+  transition:
+    background-color 0.3s ease,
+    width 0.3s ease;
+}
+
+.india-carousel-dot.active {
+  width: 28px;
+
+  border-radius: 10px;
+  background-color: #ff9800;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .india-carousel {
+    height: 420px;
+  }
+
+  .india-carousel-content {
+    left: 9%;
+    width: 78%;
+  }
+
+  .india-carousel-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .india-carousel-content h1 {
+    font-size: 36px;
+  }
+
+  .india-carousel-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .india-carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .india-carousel-prev {
+    left: 10px;
+  }
+
+  .india-carousel-next {
+    right: 10px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 480px) {
+  .india-carousel {
+    height: 360px;
+  }
+
+  .india-carousel-overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .india-carousel-content {
+    left: 12%;
+    width: 74%;
+  }
+
+  .india-carousel-label {
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .india-carousel-content h1 {
+    margin-bottom: 12px;
+    font-size: 27px;
+  }
+
+  .india-carousel-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .india-carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .india-carousel-prev {
+    left: 5px;
+  }
+
+  .india-carousel-next {
+    right: 5px;
+  }
+
+  .india-carousel-dots {
+    bottom: 15px;
+    gap: 7px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .india-carousel-track {
+    transition: none;
+  }
+
+  .india-carousel-arrow,
+  .india-carousel-dot {
+    transition: none;
+  }
+}
