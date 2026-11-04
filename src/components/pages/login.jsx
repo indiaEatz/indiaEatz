@@ -26,6 +26,7 @@ return ( <div className="login-page">
 
     <p className="login-description">
       Enjoy delicious food with IndiaEatz.
+      Enjoy delicious food with IndiaEatz.
     </p>
 
     <form onSubmit={handleLogin}>
