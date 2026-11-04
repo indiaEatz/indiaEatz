@@ -26,7 +26,7 @@ return ( <div className="login-page">
 
     <p className="login-description">
       Enjoy delicious food with IndiaEatz.
-      Suraj Pinnalwar
+      Enjoy delicious food with IndiaEatz.
     </p>
 
     <form onSubmit={handleLogin}>
