@@ -1,0 +1,26 @@
+.menu-page {
+  background-color: #fff9f0;
+  min-height: 100vh;
+}
+
+.menu-banner {
+  /* background: linear-gradient(135deg, #ff4829, #f47700); */
+  color: rgb(251, 159, 46);
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.menu-banner h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.menu-banner p {
+  font-size: 18px;
+}
+
+/* Menu content */
+
+.menu-page .cards-section {
+  padding-top: 35px;
+}

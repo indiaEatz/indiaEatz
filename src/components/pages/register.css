@@ -1,0 +1,123 @@
+.register-page {
+min-height: 90vh;
+background-color: #fff9f0;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px 20px;
+box-sizing: border-box;
+}
+
+.register-card {
+width: 100%;
+max-width: 450px;
+background-color: #ffffff;
+padding: 35px 40px;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+border-top: 6px solid #ff4829;
+box-sizing: border-box;
+}
+
+.register-logo {
+text-align: center;
+margin-bottom: 25px;
+}
+
+.register-logo h1 {
+color: #f47700;
+font-size: 35px;
+margin-bottom: 8px;
+}
+
+.register-logo h1 span {
+color: #ff4829;
+}
+
+.register-logo p {
+color: #49301f;
+font-size: 16px;
+}
+
+.register-card h2 {
+text-align: center;
+color: #49301f;
+font-size: 24px;
+}
+
+.register-description {
+text-align: center;
+color: #777;
+margin-bottom: 25px;
+font-size: 14px;
+}
+
+.register-input-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 17px;
+}
+
+.register-input-group label {
+color: #49301f;
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.register-input-group input {
+padding: 13px;
+border: 1px solid #ffd7a8;
+border-radius: 8px;
+outline: none;
+font-size: 14px;
+width: 100%;
+box-sizing: border-box;
+transition: 0.3s;
+}
+
+.register-input-group input:focus {
+border-color: #f47700;
+box-shadow: 0 0 5px rgba(244, 119, 0, 0.25);
+}
+
+/* .register-btn {
+width: 100%;
+padding: 14px;
+background: linear-gradient(135deg, #ff4829, #f47700);
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px;
+transition: 0.3s;
+} */
+
+.register-btn:hover {
+background: #e65c00;
+transform: translateY(-2px);
+}
+
+.register-login-link {
+text-align: center;
+margin-top: 23px;
+color: #49301f;
+font-size: 14px;
+}
+
+.register-login-link a {
+color: #f47700;
+font-weight: bold;
+text-decoration: none;
+}
+
+.register-login-link a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+.register-card {
+padding: 25px;
+}
+}

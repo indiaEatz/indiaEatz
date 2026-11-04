@@ -1,0 +1,139 @@
+.login-page {
+min-height: 90vh;
+background-color: #fff9f0;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px 20px;
+box-sizing: border-box;
+}
+
+.login-card {
+width: 100%;
+max-width: 430px;
+background-color: #ffffff;
+padding: 40px;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+border-top: 6px solid #ff4829;
+box-sizing: border-box;
+}
+
+.login-logo {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.login-logo h1 {
+color: #f47700;
+font-size: 35px;
+margin-bottom: 8px;
+}
+
+.login-logo h1 span {
+color: #ff4829;
+}
+
+.login-logo p {
+color: #49301f;
+font-size: 17px;
+}
+
+.login-card h2 {
+text-align: center;
+color: #49301f;
+font-size: 24px;
+}
+
+.login-description {
+text-align: center;
+color: #777;
+margin-bottom: 30px;
+}
+
+.login-input-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.login-input-group label {
+color: #49301f;
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.login-input-group input {
+padding: 14px;
+border: 1px solid #ffd7a8;
+border-radius: 8px;
+outline: none;
+font-size: 15px;
+transition: 0.3s;
+box-sizing: border-box;
+width: 100%;
+}
+
+.login-input-group input:focus {
+border-color: #f47700;
+box-shadow: 0 0 5px rgba(244, 119, 0, 0.25);
+}
+
+.login-options {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 13px;
+margin: 20px 0;
+gap: 10px;
+}
+
+.login-options label {
+color: #49301f;
+}
+
+.login-options a {
+color: #f47700;
+text-decoration: none;
+}
+
+/* .login-btn {
+width: 100%;
+padding: 14px;
+background: linear-gradient(135deg, #ff4829, #f47700);
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+} */
+
+.login-btn:hover {
+background: #e65c00;
+transform: translateY(-2px);
+}
+
+.login-register-link {
+text-align: center;
+margin-top: 25px;
+color: #49301f;
+font-size: 14px;
+}
+
+.login-register-link a {
+color: #f47700;
+font-weight: bold;
+text-decoration: none;
+}
+
+.login-register-link a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+.login-card {
+padding: 25px;
+}
+}
