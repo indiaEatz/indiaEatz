@@ -86,9 +86,8 @@ function Cards() {
 
               <button
                 type="button"
-                className={`wishlist-btn ${
-                  isWishlisted(card.id) ? "active" : ""
-                }`}
+                className={`wishlist-btn ${isWishlisted(card.id) ? "active" : ""
+                  }`}
                 onClick={() => toggleWishlist(card)}
                 aria-label={
                   isWishlisted(card.id)
@@ -109,13 +108,15 @@ function Cards() {
                 className="card-button"
                 onClick={() => viewDetails(card)}
               >
-                View Details
+                Explore More
               </button>
             </div>
 
           </div>
         ))}
       </div>
+
+
     </section>
   );
 }
