@@ -35,7 +35,6 @@ import { useNavigate, Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar() {
-
 const navigate = useNavigate();
 
 return ( <nav className="navbar">
