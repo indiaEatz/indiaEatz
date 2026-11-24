@@ -1,0 +1,146 @@
+
+.wishlist-page {
+  min-height: 80vh;
+  padding: 40px 7%;
+  background: #f8f8f8;
+}
+
+.wishlist-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.wishlist-header h1 {
+  color: #ff4b2b;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.wishlist-header p {
+  color: #666;
+}
+
+.wishlist-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.wishlist-card {
+  background: white;
+  border: 1px solid #ffe0d5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.wishlist-image {
+  position: relative;
+  height: 180px;
+}
+
+.wishlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #ff4b2b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.wishlist-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.wishlist-info h3 {
+  color: #333;
+  margin: 5px 0 8px;
+}
+
+.wishlist-info p {
+  color: #777;
+  font-size: 13px;
+  min-height: 35px;
+}
+
+.wishlist-info h4 {
+  color: #ff4b2b;
+  font-size: 18px;
+}
+
+.wishlist-cart-btn,
+.empty-wishlist button {
+  background: #ff4b2b;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.wishlist-cart-btn:hover,
+.empty-wishlist button:hover {
+  background: #e63d20;
+}
+
+.empty-wishlist {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.empty-wishlist-icon {
+  font-size: 65px;
+  color: #ff4b2b;
+}
+
+.empty-wishlist h2 {
+  color: #333;
+}
+
+.empty-wishlist p {
+  color: #777;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 900px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .wishlist-page {
+    padding: 30px 15px;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+}

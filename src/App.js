@@ -44,6 +44,7 @@
 // import Login from "./components/pages/login";
 // import Register from "./components/pages/register";
 
+
 // function App() {
 //   return (
 //     <BrowserRouter>
@@ -91,6 +92,12 @@ import Login from "./components/pages/login";
 import Register from "./components/pages/register";
 import { About } from "./components/pages/about.jsx";
 import { Contact } from "./components/pages/contact.jsx";
+import CardDetail from "./components/pages/cart-detail.jsx";
+import Cart from "./components/pages/cart.jsx";
+import { CartProvider } from "./components/cart-context";
+import Checkout from "./components/pages/checkout.jsx";
+import OrderHistory from "./components/pages/order-history.jsx";
+import Wishlist from "./components/pages/wishlist.jsx";
 
 console.log("ABOUT:", About);
 console.log("ABOUT TYPE:", typeof About);
@@ -104,6 +111,7 @@ console.log("CONTACT DEFAULT:", Contact.default);
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <Navbar />
 
@@ -114,8 +122,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/card-detail" element={<CardDetail />} />
+         <Route path="/cart" element={<Cart />} />
+         <Route path="/checkout" element={<Checkout />} />
+         <Route path="/order-history" element={<OrderHistory />} />
+         <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
