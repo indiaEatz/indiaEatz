@@ -30,75 +30,89 @@
 // }
 
 // export default Navbar;
+
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useCart } from "./cart-context";
 import "./navbar.css";
 
 function Navbar() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { cartCount, wishlist } = useCart();
 
-return ( <nav className="navbar">
+  return (
+    <nav className="navbar">
 
+      {/* Logo */}
+      <div className="navbar-logo">
+        <img
+          src="/images/logo.png"
+          alt="IndiaEatZ Logo"
+          className="logo-image"
+        />
+      </div>
 
-  {/* Logo */}
-  <div className="navbar-logo">
-    <img
-      src="/images/logo.png"
-      alt="IndiaEatZ Logo"
-      className="logo-image"
-    />
-  </div>
+      {/* Navigation Links */}
+      <div className="navbar-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/order-history">My Orders</Link>
+        <Link to="/wishlist" className="wishlist-nav-link">
+  ❤️ Wishlist
 
-  {/* Navigation Links */}
-  <div className="navbar-links">
+  {wishlist.length > 0 && (
+    <span className="wishlist-count-badge">
+      {wishlist.length}
+    </span>
+  )}
+</Link>
+      </div>
 
-    <Link to="/">Home</Link>
+      {/* Navbar Actions */}
+      <div className="navbar-actions">
 
-    <Link to="/about">About</Link>
+        <input
+          type="text"
+          placeholder="Search delicious food..."
+          className="search-bar"
+        />
 
-    <Link to="/menu">Menu</Link>
+        {/* Shopping Cart */}
+        <button
+          className="cart-btn"
+          onClick={() => navigate("/cart")}
+          aria-label={`Shopping cart with ${cartCount} items`}
+        >
+          🛒
 
-    <Link to="/contact">Contact</Link>
+          {cartCount > 0 && (
+            <span className="cart-count-badge">
+              {cartCount}
+            </span>
+          )}
+        </button>
 
-  </div>
+        <button
+          className="login-btn"
+          onClick={() => navigate("/login")}
+        >
+          Login
+        </button>
 
-  {/* Navbar Actions */}
-  <div className="navbar-actions">
+        <button
+          className="register-btn"
+          onClick={() => navigate("/register")}
+        >
+          Register
+        </button>
 
-    <input
-      type="text"
-      placeholder="Search delicious food..."
-      className="search-bar"
-    />
-
-    <button
-      className="cart-btn"
-      onClick={() => navigate("/cart")}
-    >
-      🛒
-    </button>
-
-    <button
-      className="login-btn"
-      onClick={() => navigate("/login")}
-    >
-      Login
-    </button>
-
-    <button
-      className="register-btn"
-      onClick={() => navigate("/register")}
-    >
-      Register
-    </button>
-
-  </div>
-
-</nav>
-
-
-);
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;
+
 

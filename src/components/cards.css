@@ -1,7 +1,7 @@
+
 /* Main Section */
 .cards-section {
   padding: 40px 20px;
-  /* background-color: #fff8f0; */
   text-align: center;
 }
 
@@ -50,6 +50,7 @@
 
 /* Image Container */
 .card-image-container {
+  position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
@@ -90,7 +91,7 @@
   margin-bottom: 18px;
 }
 
-/* Button */
+/* View Details Button */
 .card-button {
   background-color: #e06610;
   color: white;
@@ -104,51 +105,50 @@
   transition: all 0.3s ease;
 }
 
-/* Button Hover */
 .card-button:hover {
   background-color: #fff0d9;
   color: #c44d00;
   border-color: #c44d00;
 }
 
-/* Image Container */
-.card-image-container {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-/* Heart Button on Image */
-.add-to-cart-button {
+/* Wishlist Heart Button */
+.wishlist-btn {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 40px;
-  height: 40px;
-  background-color: #fff8f0;
-  color: #e06610;
-  border: 2px solid #ffe0c2;
-  border-radius: 50%;
-  font-size: 25px;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+
+  width: 36px;
+  height: 36px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: white;
+  color: #ff4b2b;
+
+  border: 2px solid #ffe0c2;
+  border-radius: 50%;
+
+  font-size: 22px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 2;
-  box-shadow: 0 3px 8px rgba(224, 102, 16, 0.15);
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
 }
 
-/* Hover Effect */
-.add-to-cart-button:hover {
-  background-color: #e06610;
+/* Active Wishlist Heart */
+.wishlist-btn.active {
+  background: #ff4b2b;
   color: white;
-  border-color: #e06610;
-  transform: scale(1.1);
+  border-color: #ff4b2b;
 }
 
-
+/* Heart Hover */
+.wishlist-btn:hover {
+  transform: scale(1.15);
+}
 
 /* Tablet Responsive */
 @media (max-width: 992px) {
