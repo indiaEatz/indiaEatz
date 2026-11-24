@@ -3,6 +3,7 @@ import Carousel from "./carousel"
 import Cards from "./cards"
 // import { createBrowserRouter } from "react-router-dom";
 import "./main.css";
+import Footer from "./footer";
 
 
 function Main() {
@@ -12,6 +13,7 @@ function Main() {
       
       <Carousel />
       <Cards />
+      <Footer />
       
       
       
